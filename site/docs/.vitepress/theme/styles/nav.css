@@ -1,0 +1,76 @@
+/* Nav bar — glassy, mono wordmark, command-palette search. */
+
+.VPNavBar {
+  border-bottom: 1px solid transparent;
+}
+.VPNavBar.has-sidebar .content,
+.VPNavBar .wrapper {
+  backdrop-filter: saturate(160%) blur(12px);
+}
+
+/* Translucent surface so content scrolls under the bar */
+.VPNavBar:not(.home) {
+  background: color-mix(in srgb, var(--ph-bg-alt) 72%, transparent);
+  border-bottom-color: var(--vp-c-divider);
+}
+.VPNavBar.home.top {
+  background: transparent;
+}
+.VPNavBar:not(.top) {
+  background: color-mix(in srgb, var(--ph-bg-alt) 78%, transparent);
+  border-bottom-color: var(--vp-c-divider);
+}
+
+.VPNavBarTitle .title {
+  font-family: var(--ph-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  gap: 8px;
+}
+
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .text {
+  font-family: var(--ph-font-mono);
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
+.VPNavBarMenuLink {
+  position: relative;
+}
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1);
+}
+.VPNavBarMenuLink.active::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ph-grad);
+}
+
+.DocSearch-Button,
+.VPNavBarSearchButton {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+.VPNavBarSearch .DocSearch-Button-Keys,
+.VPNavBarSearch .DocSearch-Button-Placeholder {
+  font-family: var(--ph-font-mono);
+}
+
+/* Brand-colored social icons: npm red, GitHub mark black/white per theme. */
+.VPSocialLink[aria-label="npm package"],
+.VPSocialLink[aria-label="npm package"]:hover {
+  color: #cb3837;
+}
+.VPSocialLink[aria-label="GitHub repository"],
+.VPSocialLink[aria-label="GitHub repository"]:hover {
+  color: #24292f;
+}
+.dark .VPSocialLink[aria-label="GitHub repository"],
+.dark .VPSocialLink[aria-label="GitHub repository"]:hover {
+  color: #ffffff;
+}

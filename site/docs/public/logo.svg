@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="PagiHelp">
+  <defs>
+    <linearGradient id="phg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <!-- brackets -->
+  <path d="M14 7 H9 a2 2 0 0 0 -2 2 V39 a2 2 0 0 0 2 2 H14" fill="none" stroke="url(#phg)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M34 7 H39 a2 2 0 0 1 2 2 V39 a2 2 0 0 1 -2 2 H34" fill="none" stroke="url(#phg)" stroke-width="3" stroke-linecap="round"/>
+  <!-- paginated rows -->
+  <rect x="16" y="15" width="16" height="3.4" rx="1.7" fill="url(#phg)"/>
+  <rect x="16" y="22.3" width="16" height="3.4" rx="1.7" fill="url(#phg)" opacity="0.7"/>
+  <rect x="16" y="29.6" width="10" height="3.4" rx="1.7" fill="url(#phg)" opacity="0.45"/>
+  <!-- caret cursor -->
+  <rect x="28.5" y="28.4" width="3.4" height="5.8" rx="1" fill="#22d3ee"/>
+</svg>

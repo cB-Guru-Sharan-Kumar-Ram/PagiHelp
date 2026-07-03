@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # Site dependencies — opens a PR when a new pagi-help (or vitepress) version is published.
+  - package-ecosystem: npm
+    directory: /site
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 5

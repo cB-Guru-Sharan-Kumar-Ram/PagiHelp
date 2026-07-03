@@ -1,0 +1,16 @@
+/* Home — let the injected console-home sections sit flush and full-width
+   (the default VPHome hero/features render nothing without frontmatter). */
+
+.VPHome {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.VPHome > .VPHomeHero:empty,
+.VPHome > .VPHomeFeatures:empty {
+  display: none;
+}
+
+.VPContent.is-home {
+  padding: 0 !important;
+}

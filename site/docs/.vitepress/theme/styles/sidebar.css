@@ -1,0 +1,43 @@
+/* Sidebar — mono section labels, accent active item. */
+
+.VPSidebar {
+  background: var(--vp-c-bg-alt);
+}
+
+.VPSidebarItem.level-0 > .item > .text,
+.VPSidebarItem.collapsible.level-0 > .item .text {
+  font-family: var(--ph-font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ph-text-3);
+}
+
+.VPSidebarItem .link .text {
+  transition: color 0.15s ease;
+}
+
+.VPSidebarItem.is-active > .item .link .text,
+.VPSidebarItem.is-active > .item .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+.VPSidebarItem.is-link.is-active > .item {
+  position: relative;
+}
+.VPSidebarItem.is-link.is-active > .item::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 16px;
+  border-radius: 2px;
+  background: var(--ph-grad);
+}
+
+.VPDocAsideOutline .title,
+.VPDocOutlineItem {
+  font-family: var(--ph-font-mono);
+}

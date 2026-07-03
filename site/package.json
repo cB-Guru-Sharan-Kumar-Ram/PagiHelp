@@ -1,0 +1,19 @@
+{
+  "name": "pagi-help-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Documentation website for the pagi-help library",
+  "type": "module",
+  "scripts": {
+    "build:lib": "node scripts/build-lib.mjs",
+    "docs:dev": "node scripts/build-lib.mjs && vitepress dev docs",
+    "docs:build": "node scripts/build-lib.mjs && vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "pagi-help": "^2.5.4"
+  }
+}

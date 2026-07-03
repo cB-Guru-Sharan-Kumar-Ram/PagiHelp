@@ -1,0 +1,6 @@
+node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/public/pagihelp.global.js
+*.log
+.DS_Store

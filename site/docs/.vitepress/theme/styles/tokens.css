@@ -1,0 +1,103 @@
+/* "Query Console" design tokens, mapped onto VitePress CSS variables.
+   Dark is the default theme; light is a toggle. */
+
+:root {
+  /* Brand accents (shared across themes) */
+  --ph-violet: #7c5cff;
+  --ph-violet-hi: #9d86ff;
+  --ph-cyan: #22d3ee;
+  --ph-grad: linear-gradient(110deg, #7c5cff 0%, #22d3ee 100%);
+
+  /* SQL syntax accents (hero console + code theme) */
+  --ph-sql-keyword: #a78bfa;
+  --ph-sql-string: #5eead4;
+  --ph-sql-number: #fbbf24;
+  --ph-sql-ident: #e6e9f0;
+  --ph-sql-punct: #7c879e;
+
+  /* Light theme surfaces (toggle) */
+  --ph-bg: #ffffff;
+  --ph-bg-alt: #f7f8fc;
+  --ph-bg-soft: #ffffff;
+  --ph-border: #e6e8f0;
+  --ph-text-1: #0b1220;
+  --ph-text-2: #4a5268;
+  --ph-text-3: #6b7488;
+
+  /* In light mode the SQL identifiers should be dark, not near-white */
+  --ph-sql-ident: #0b1220;
+
+  /* Typography */
+  --ph-font-display: "Space Grotesk", "Geist Sans", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+  --ph-font-body: "Geist Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --ph-font-mono: "Geist Mono", ui-monospace, "SF Mono", "Menlo", "Consolas",
+    monospace;
+
+  /* Map onto VitePress vars (brand + fonts are theme-agnostic) */
+  --vp-c-brand-1: var(--ph-violet);
+  --vp-c-brand-2: var(--ph-violet-hi);
+  --vp-c-brand-3: var(--ph-cyan);
+  --vp-c-brand-soft: rgba(124, 92, 255, 0.14);
+
+  --vp-font-family-base: var(--ph-font-body);
+  --vp-font-family-mono: var(--ph-font-mono);
+
+  /* Hero name uses the signature gradient */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: var(--ph-grad);
+
+  /* Brand button → gradient handled in base.css */
+  --vp-button-brand-bg: var(--ph-violet);
+  --vp-button-brand-hover-bg: var(--ph-violet-hi);
+  --vp-button-brand-active-bg: var(--ph-violet);
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+
+  /* Light-mode VitePress surfaces */
+  --vp-c-bg: var(--ph-bg);
+  --vp-c-bg-alt: var(--ph-bg-alt);
+  --vp-c-bg-soft: var(--ph-bg-alt);
+  --vp-c-bg-elv: var(--ph-bg-soft);
+  --vp-c-divider: var(--ph-border);
+  --vp-c-border: var(--ph-border);
+  --vp-c-gutter: var(--ph-border);
+  --vp-c-text-1: var(--ph-text-1);
+  --vp-c-text-2: var(--ph-text-2);
+  --vp-c-text-3: var(--ph-text-3);
+}
+
+/* Dark theme (default identity) */
+.dark {
+  --ph-bg: #0a0c10;
+  --ph-bg-alt: #0d1017;
+  --ph-bg-soft: #11151f;
+  --ph-border: #1c2230;
+  --ph-text-1: #e6e9f0;
+  --ph-text-2: #9aa4b8;
+  --ph-text-3: #7c879e;
+  --ph-sql-ident: #e6e9f0;
+
+  --vp-c-bg: var(--ph-bg);
+  --vp-c-bg-alt: var(--ph-bg-alt);
+  --vp-c-bg-soft: var(--ph-bg-soft);
+  --vp-c-bg-elv: var(--ph-bg-soft);
+  --vp-c-divider: var(--ph-border);
+  --vp-c-border: var(--ph-border);
+  --vp-c-gutter: #05070b;
+  --vp-c-text-1: var(--ph-text-1);
+  --vp-c-text-2: var(--ph-text-2);
+  --vp-c-text-3: var(--ph-text-3);
+
+  --vp-code-block-bg: var(--ph-bg-soft);
+  --vp-code-line-highlight-color: rgba(124, 92, 255, 0.12);
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(124, 92, 255, 0.35),
+    rgba(34, 211, 238, 0.3)
+  );
+  --vp-home-hero-image-filter: blur(64px);
+}

@@ -1,0 +1,181 @@
+/* Typography scale, links, selection, scrollbar, buttons, motion. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ph-font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+.VPHero .name,
+.VPHero .text {
+  font-family: var(--ph-font-display);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 700;
+}
+h2,
+h3 {
+  font-weight: 600;
+}
+
+.vp-doc h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+}
+.vp-doc h2 {
+  margin-top: 2.4rem;
+  padding-top: 1.6rem;
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.75;
+}
+
+.vp-doc a {
+  font-weight: 500;
+  text-decoration-color: var(--vp-c-brand-soft);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.vp-doc a:hover {
+  text-decoration-color: var(--ph-violet);
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.32);
+  color: var(--ph-text-1);
+}
+
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--ph-violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ph-border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--ph-border);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--ph-text-3);
+  background-clip: padding-box;
+}
+
+.VPButton.brand {
+  border: none;
+  background: var(--ph-grad);
+  background-size: 160% 160%;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(124, 92, 255, 0.32);
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+    background-position 0.6s ease;
+}
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  background-position: 100% 50%;
+  box-shadow: 0 14px 32px rgba(124, 92, 255, 0.42);
+}
+
+.VPButton.alt {
+  border: 1px solid var(--vp-c-divider);
+  background: transparent;
+  transition: transform 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+.VPButton.alt:hover {
+  transform: translateY(-2px);
+  border-color: var(--ph-violet);
+  color: var(--ph-violet-hi);
+}
+
+:not(pre) > code {
+  font-family: var(--ph-font-mono);
+  border-radius: 6px;
+  background: var(--vp-c-brand-soft) !important;
+  color: var(--vp-c-brand-1) !important;
+  padding: 0.18em 0.4em !important;
+  font-size: 0.86em;
+}
+
+.custom-block {
+  border-radius: 12px;
+  border-width: 0 0 0 3px;
+}
+.custom-block.tip {
+  border-left-color: var(--ph-cyan);
+}
+.custom-block.info {
+  border-left-color: var(--ph-violet);
+}
+.custom-block.warning {
+  border-left-color: #fbbf24;
+}
+.custom-block.danger {
+  border-left-color: #f87171;
+}
+
+.VPFooter {
+  position: relative;
+  background: var(--vp-c-bg-alt);
+  border-top: 1px solid var(--vp-c-divider);
+}
+.VPFooter::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ph-grad);
+  opacity: 0.6;
+}
+.VPFooter .message,
+.VPFooter .copyright {
+  font-family: var(--ph-font-mono);
+  font-size: 12.5px;
+}
+
+.VPContent {
+  animation: ph-fade 0.32s ease;
+}
+@keyframes ph-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .VPContent,
+  .VPButton.brand,
+  .VPButton.alt {
+    animation: none;
+    transition: none;
+  }
+}
