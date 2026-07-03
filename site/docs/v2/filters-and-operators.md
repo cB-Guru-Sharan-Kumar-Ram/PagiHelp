@@ -11,8 +11,8 @@ Filters are how you express `WHERE` conditions. Each condition is a tuple:
 - `operator` must be one of the supported operators (validated).
 - `value` is parameterized into `replacements` (never concatenated).
 
-`filters` is optional — omit it, or pass an empty `filters: []` (allowed since
-2.5.1), and no conditions are added.
+`filters` is optional — omit it, or pass an empty `filters: []`, and no
+conditions are added.
 
 ## Combining conditions: AND / OR
 
